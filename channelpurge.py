@@ -6,8 +6,8 @@ client = commands.Bot(command_prefix = '.')
 @client.event
 async def on_ready():
     print('Pronto para apagar segredos.')
-target_channel_id = None
-@client.command(pass_context=True)
+
+@client.command()
 async def canal(ctx, target_channel_id):
     if target_channel_id is None:
         return ctx.send('Insira um canal!')
